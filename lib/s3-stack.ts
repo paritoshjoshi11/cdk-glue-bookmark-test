@@ -11,5 +11,11 @@ export class S3Stack extends cdk.Stack {
       bucketName: 'raw-landing-5491',
       autoDeleteObjects: true,
     });
+
+    const publishedLanding = new Bucket(this, 'published-landing', {
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
+      bucketName: 'published-landing-5491',
+      autoDeleteObjects: true,
+    });
   }
 }
