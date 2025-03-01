@@ -16,7 +16,8 @@ job.init(args['JOB_NAME'], args)
 # Read data from Glue Data Catalog
 datasource = glueContext.create_dynamic_frame.from_catalog(
     database=args['DATABASE_NAME'],
-    table_name=args['TABLE_NAME']
+    table_name=args['TABLE_NAME'],
+    transformation_ctx="datasource_landing"
 )
 
 # Convert DynamicFrame to DataFrame
@@ -26,8 +27,8 @@ dataframe = datasource.toDF()
 dataframe.show()
 
 # Write data to new S3 bucket
-output_path = f"s3://{args['OUTPUT_BUCKET']}/"
-dataframe.write.mode("overwrite").parquet(output_path)
+output_path = f"s3://{args['OUTPUT_BUCKET']}/op/"
+dataframe.write.mode("append").parquet(output_path)
 
 # Commit job
 job.commit()

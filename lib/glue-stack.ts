@@ -116,7 +116,7 @@ export class GlueStack extends Stack{
                 '--job-bookmark-option': 'job-bookmark-enable',
                 '--DATABASE_NAME': 'sample-database-5491',
                 '--TABLE_NAME': 'raw_landing_5491', // Replace with your actual table name
-                '--OUTPUT_BUCKET':'s3://published-landing-5491/'
+                '--OUTPUT_BUCKET':'published-landing-5491'
             },
         });
 
