@@ -14,4 +14,4 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * `npx cdk synth`   emits the synthesized CloudFormation template
 
 ## Architecture Diagram
-![Architecture Diagram](glue-bookmark-arch.png)
+![Architecture Diagram](diagram.png)

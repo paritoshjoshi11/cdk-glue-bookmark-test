@@ -1,0 +1,267 @@
+digraph "Diagram" {
+  splines = "ortho";
+  pad = "1.0";
+  nodesep = "0.60";
+  ranksep = "0.75";
+  fontname = "Sans-Serif";
+  fontsize = "15";
+  dpi = "200";
+  rankdir = "BT";
+  compound = "true";
+  fontcolor = "#222222";
+  edge [
+    color = "#D5871488",
+    penwidth = 2,
+    arrowhead = "dot",
+    arrowtail = "dot",
+  ];
+  node [
+    shape = "box",
+    style = "rounded",
+    fixedsize = true,
+    width = 1.7,
+    height = 1.7,
+    labelloc = "c",
+    imagescale = true,
+    fontname = "Sans-Serif",
+    fontsize = 8,
+    margin = 8,
+  ];
+  subgraph "App" {
+    subgraph "cluster-SubGraph.App" {
+      graph [
+        label = "App",
+        labelloc = "b",
+        labeljust = "l",
+        margin = "10",
+        fontsize = "16",
+        penwidth = "2",
+        pencolor = "#888888",
+        style = "filled,rounded",
+        fillcolor = "#f3f3f3",
+      ];
+      subgraph "cluster-SubGraph.S3Stack" {
+        graph [
+          label = "S3Stack",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#e4e4e4",
+        ];
+        "S3Stack/raw-landing" [
+          label = " raw-landing",
+          fontsize = 12,
+          image = "C:\Users\parit\aws-all-proj\cdk-glue-bookmark-test\node_modules\cdk-dia\icons\aws\Service\Arch_Storage\64\Arch_Amazon-S3-Standard_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "S3Stack/published-landing" [
+          label = " published-landing",
+          fontsize = 12,
+          image = "C:\Users\parit\aws-all-proj\cdk-glue-bookmark-test\node_modules\cdk-dia\icons\aws\Service\Arch_Storage\64\Arch_Amazon-S3-Standard_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+      }
+      subgraph "cluster-SubGraph.GlueStack" {
+        graph [
+          label = "GlueStack",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#e4e4e4",
+        ];
+        "GlueStack/script-bucket" [
+          label = " script-bucket",
+          fontsize = 12,
+          image = "C:\Users\parit\aws-all-proj\cdk-glue-bookmark-test\node_modules\cdk-dia\icons\aws\Service\Arch_Storage\64\Arch_Amazon-S3-Standard_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "GlueStack/Custom__CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C" [
+          label = " Custom \nCDKBucketDeployment86",
+          fontsize = 12,
+          image = "C:\Users\parit\aws-all-proj\cdk-glue-bookmark-test\node_modules\cdk-dia\icons\aws\Service\Arch_Compute\64\Arch_AWS-Lambda_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.4819999999999998,
+        ];
+        "GlueStack/GlueDatabase" [
+          label = " GLUE DATABASE\nGlueDatabase",
+          fontsize = 12,
+        ];
+        "GlueStack/testdb" [
+          label = " testdb",
+          fontsize = 12,
+        ];
+        "GlueStack/glue-role" [
+          label = " glue-role",
+          fontsize = 12,
+          image = "C:\Users\parit\aws-all-proj\cdk-glue-bookmark-test\node_modules\cdk-dia\icons\aws\Service\Arch_Security-Identity-Compliance\64\Arch_AWS-Identity-and-Access-Management_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "GlueStack/LakeFormationPermissions" [
+          label = " LAKEFORMATION\nPERMISSIONS",
+          fontsize = 12,
+        ];
+        "GlueStack/raw-crawler" [
+          label = " GLUE CRAWLER\nraw-crawler",
+          fontsize = 12,
+        ];
+        "GlueStack/pub-crawler" [
+          label = " GLUE CRAWLER\npub-crawler",
+          fontsize = 12,
+        ];
+        "GlueStack/GlueJob" [
+          label = " Glue Job GlueJob",
+          fontsize = 12,
+          image = "C:\Users\parit\aws-all-proj\cdk-glue-bookmark-test\node_modules\cdk-dia\icons\aws\Service\Arch_Analytics\Arch_64\Arch_AWS-Glue_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "GlueStack/GlueWorkflow" [
+          label = " Glue Workflow\nGlueWorkflow",
+          fontsize = 12,
+          image = "C:\Users\parit\aws-all-proj\cdk-glue-bookmark-test\node_modules\cdk-dia\icons\aws\Service\Arch_Analytics\Arch_64\Arch_AWS-Glue_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.4819999999999998,
+        ];
+        "GlueStack/TestWorkflow" [
+          label = " Glue Workflow\nTestWorkflow",
+          fontsize = 12,
+          image = "C:\Users\parit\aws-all-proj\cdk-glue-bookmark-test\node_modules\cdk-dia\icons\aws\Service\Arch_Analytics\Arch_64\Arch_AWS-Glue_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.4819999999999998,
+        ];
+        "GlueStack/raw-crawler-trigger" [
+          label = " GLUE TRIGGER\nraw-crawler-trigger",
+          fontsize = 12,
+        ];
+        "GlueStack/glue-job-trigger" [
+          label = " GLUE TRIGGER\nglue-job-trigger",
+          fontsize = 12,
+        ];
+        "GlueStack/test-crawler-trigger-111" [
+          label = " GLUE TRIGGER",
+          fontsize = 12,
+        ];
+        subgraph "cluster-SubGraph.GlueScriptsDeployment" {
+          graph [
+            label = "GlueScriptsDeployment",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#d6d6d6",
+          ];
+          "GlueStack/GlueScriptsDeployment/AwsCliLayer" [
+            label = " AwsCliLayer",
+            fontsize = 12,
+            image = "C:\Users\parit\aws-all-proj\cdk-glue-bookmark-test\node_modules\cdk-dia\icons\aws\Service\Arch_Compute\64\Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "GlueStack/GlueScriptsDeployment/CustomResource" [
+            label = " CloudFormation\nCustomResource\nCustomResource",
+            fontsize = 12,
+            image = "C:\Users\parit\aws-all-proj\cdk-glue-bookmark-test\node_modules\cdk-dia\icons\aws\Service\Arch_Management-Governance\64\Arch_AWS-CloudFormation_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.898,
+          ];
+        }
+      }
+    }
+  }
+  "GlueStack/Custom__CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C" -> "GlueStack/script-bucket" [
+    dir = "both",
+  ];
+  "GlueStack/Custom__CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C" -> "GlueStack/GlueScriptsDeployment/AwsCliLayer" [
+    dir = "both",
+  ];
+  "GlueStack/LakeFormationPermissions" -> "GlueStack/glue-role" [
+    dir = "both",
+  ];
+  "GlueStack/raw-crawler" -> "GlueStack/glue-role" [
+    dir = "both",
+  ];
+  "GlueStack/pub-crawler" -> "GlueStack/glue-role" [
+    dir = "both",
+  ];
+  "GlueStack/GlueJob" -> "GlueStack/script-bucket" [
+    dir = "both",
+  ];
+  "GlueStack/GlueJob" -> "GlueStack/glue-role" [
+    dir = "both",
+  ];
+}
